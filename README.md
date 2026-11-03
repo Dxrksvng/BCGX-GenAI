@@ -1,8 +1,44 @@
-# Advanced AI-Powered Financial Chatbot
+<div align="center">
+
+# Financial Chatbot (BCG GenAI Job Simulation)
+
+**A rule-based conversational assistant that turns spreadsheet financials into plain-language answers.**
+
+![Type job simulation](https://img.shields.io/badge/Type-job_simulation-7C3AED?style=for-the-badge) ![Python pandas](https://img.shields.io/badge/Python-pandas-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Approach rule-based NLP](https://img.shields.io/badge/Approach-rule--based_NLP-F59E0B?style=for-the-badge) ![Deployed no](https://img.shields.io/badge/Deployed-no-lightgrey?style=for-the-badge)
+
+</div>
+
+> Built for the BCG X GenAI job simulation (Forage). It uses keyword and pattern intent matching, not an LLM, and it has not been deployed.
+
+## Tech stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,pandas,jupyter&perline=10" alt="Tech stack" />
+</p>
+
+## Dialogue flow
+
+```mermaid
+flowchart LR
+    U(["Stakeholder question"]) --> IM["IntentMatcher\nkeywords + patterns"]
+    IM --> H{"Intent handler"}
+    H --> R["Revenue"]
+    H --> P["Profit"]
+    H --> O["Other financial intents"]
+    R --> D[("financial_data.xlsx\npandas")]
+    P --> D
+    O --> D
+    D --> A["Plain-language answer\n+ follow-up suggestions"]
+    A --> S[("Conversation state\ncontext + history")]
+    S --> IM
+```
+
+---
+
 ## Implementation Guide & Technical Documentation
 
 **Version:** 2.0 (Enhanced with NLP Principles)  
-**Status:** ✅ Production Ready  
+**Status:** simulation deliverable (not deployed to production)  
 **Client:** Global Finance Corp (GFC)  
 **Date:** April 12, 2026
 
@@ -29,7 +65,7 @@
 Build an advanced AI chatbot that translates complex financial data into accessible, conversational insights for non-technical stakeholders at Global Finance Corp.
 
 ### Key Deliverables
-- ✅ **Production-ready Python script** (advanced_financial_chatbot.py)
+- ✅ **Python script** (advanced_financial_chatbot.py)
 - ✅ **All 5 core NLP principles** fully implemented
 - ✅ **8 real-world scenarios** validated
 - ✅ **Interactive dialogue system** with context awareness
